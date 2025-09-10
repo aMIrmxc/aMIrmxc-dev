@@ -166,7 +166,7 @@ function demo() {
 
 Image in the same folder: `src/content/post/markdown-elements/logo.png`
 
-![Astro theme cactus logo](./logo.png)
+![Astro theme mxc logo](./logo.png)
 
 ## Links
 

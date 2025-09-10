@@ -1,6 +1,6 @@
 ---
 title: "Markdown Admonitions"
-description: "This post showcases using the markdown admonition feature in Astro Cactus"
+description: "This post showcases using the markdown admonition feature in Astro mxc"
 publishDate: "25 Aug 2024"
 updatedDate: "4 July 2025"
 tags: ["markdown", "admonitions"]
@@ -12,7 +12,7 @@ Admonitions (also known as “asides”) are useful for providing supportive and
 
 ## How to use them
 
-To use admonitions in Astro Cactus, wrap your Markdown content in a pair of triple colons `:::`. The first pair should also include the type of admonition you want to use.
+To use admonitions in Astro mxc, wrap your Markdown content in a pair of triple colons `:::`. The first pair should also include the type of admonition you want to use.
 
 For example, with the following Markdown:
 
@@ -115,9 +115,10 @@ This is a note with a custom title.
 :::
 
 ## GitHub Repository Cards
+
 You can add dynamic cards that link to GitHub repositories, on page load, the repository information is pulled from the GitHub API.
 
-::github{repo="chrismwilliams/astro-theme-cactus"}
+::github{repo="chrismwilliams/astro-theme-mxc"}
 
 You can also link a Github user:
 
@@ -126,7 +127,7 @@ You can also link a Github user:
 To use this feature you just use the "Github" directive:
 
 ```markdown title="Linking a repo"
-::github{repo="chrismwilliams/astro-theme-cactus"}
+::github{repo="chrismwilliams/astro-theme-mxc"}
 ```
 
 ```markdown title="Linking a user"
