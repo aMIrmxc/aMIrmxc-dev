@@ -5,21 +5,14 @@ import { menuLinks } from "@/site.config";
 import { siteConfig } from "../../site.config";
 ---
 
-<header class="group relative mb-28 flex items-center sm:ps-18" id="main-header">
-
-	
-	<div class="flex ps-6 sm:flex-col sm:ps-0">
+<header class="group relative mb-28 flex items-center" id="main-header">
+	<div class="flex sm:flex-col">
 		<a
 			aria-current={Astro.url.pathname === "/" ? "page" : false}
 			class="inline-flex items-center grayscale hover:filter-none sm:relative sm:inline-block"
 			href="/"
 		>
-				<img
-					src="/icon.png"
-					alt="Logo"
-					class="me-0 hidden h-10 w-10 sm:absolute sm:-start-18 sm:me-0 sm:block sm:h-16 sm:w-16"
-				/>
-			<span class=" px-5 text-xl font-bold sm:text-2xl">{siteConfig.title}</span>
+			<span class="text-xl font-bold sm:text-2xl">{siteConfig.title}</span>
 		</a>
 		<nav
 			aria-label="Main menu"
@@ -60,7 +53,7 @@ import { siteConfig } from "../../site.config";
 				stroke="currentColor"
 				stroke-width="1.5"
 				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg"
+				xmlns="http://www.w3.org/2000/2000/svg"
 			>
 				<path d="M3.75 9h16.5m-16.5 6.75h16.5" stroke-linecap="round" stroke-linejoin="round"
 				></path>
@@ -75,7 +68,7 @@ import { siteConfig } from "../../site.config";
 				stroke="currentColor"
 				stroke-width="1.5"
 				viewBox="0 0 24 24"
-				xmlns="http://www.w3.org/2000/svg"
+				xmlns="http://www.w3.org/2000/2000/svg"
 			>
 				<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
 			</svg>
@@ -103,5 +96,4 @@ import { siteConfig } from "../../site.config";
 
 	customElements.define("mobile-button", MobileNavBtn);
 </script>
-```
 
