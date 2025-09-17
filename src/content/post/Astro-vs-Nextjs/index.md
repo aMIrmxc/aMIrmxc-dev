@@ -1,5 +1,5 @@
 ---
-title: "Astro vs Next.js "
+title: "Astro درمقابل Next.js "
 description: "مقایسه جامع Astro و Next.js از نظر performance، معماری، انعطاف‌پذیری و انتخاب مناسب برای پروژه‌های مختلف"
 publishDate: "17 Apr 2025"
 tags: ["astro", "nextjs", "performance", "react", "ssr", "ssg"]

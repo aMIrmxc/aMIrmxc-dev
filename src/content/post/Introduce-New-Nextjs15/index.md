@@ -1,5 +1,5 @@
 ---
-title: "Next.js 15: راهنمای Migration "
+title: "Next.js 15 راهنمای "
 description: "هر آنچه برای ارتقاء به Next.js 15 نیاز دارید؛ از Codemod خودکار تا breaking changeهای caching و async APIها"
 publishDate: "14 Aug 2024"
 updatedDate: "03 Mar 2025"
