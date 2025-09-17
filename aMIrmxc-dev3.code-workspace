@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"typescript.tsdk": "node_modules/typescript/lib",
+		"files.associations": {
+			"*.css": "tailwindcss"
+		},
+		"tailwindCSS.experimental.configFile": "./src/styles/global.css",
+		"workbench.colorCustomizations": {
+			"activityBar.background": "#293c81",
+			"titleBar.activeBackground": "#1f2f6f",
+			"titleBar.activeForeground": "#FDF8FC"
+		}
+	}
+}
