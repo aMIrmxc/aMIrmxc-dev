@@ -1,5 +1,5 @@
 ---
-title: "راهنمای کامل React: همه مفاهیم به زبان ساده"
+title: "راهنمای کامل React: مفاهیم به زبان ساده"
 description: "این پست تمام مفاهیم اساسی React را از componentها و JSX گرفته تا Context، Portals و Error Boundaries با مثال‌های عملی و توضیحات ساده پوشش می‌دهد"
 publishDate: "15 Apr 2024"
 updatedDate: "03 Jan 2025"

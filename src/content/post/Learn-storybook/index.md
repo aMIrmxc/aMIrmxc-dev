@@ -1,5 +1,5 @@
 ---
-title: "آموزش کامل React Storybook: ساخت component های بهتر با documentation و testing"
+title: "آموزش  React Storybook: "
 description: "راهنمای جامع  برای راه‌اندازی، ساخت story و بهترین‌‌های کار با Storybook در پروژه‌های React"
 publishDate: "17 Sep 2023"
 updatedDate: "03 May 2025"

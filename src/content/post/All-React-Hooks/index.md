@@ -1,5 +1,5 @@
 ---
-title: "راهنمای کامل React Hooks: همه‌ی Hook‌ها با مثال"
+title: "راهنمای  React Hooks: همه‌ی Hook‌ها  "
 description: "مرجع جامع  برای آشنایی با تمام Hook های React، کاربرد و مثال عملی هرکدام"
 publishDate: "15 Apr 2024"
 updatedDate: "03 Jan 2025"

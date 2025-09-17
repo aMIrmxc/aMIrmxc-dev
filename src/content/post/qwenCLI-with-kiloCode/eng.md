@@ -1,6 +1,6 @@
 ---
-title: "How to Use the Best FREE AI Agentic Coding (with Kilo Code + Qwen Code CLI)"
-description: "Unlock 2,000 FREE AI coding requests per day with this powerful combination of Kilo Code and Qwen Code CLI"
+title: "  FREE AI Agentic Coding (Kilo Code + Qwen CLI)"
+description: "Unlock 2,000 FREE AI coding requests per day with this powerful combination of Kilo Code and Qwen  CLI"
 publishDate: "17 Sep 2025"
 tags: ["AI coding", "Qwen", "Kilo Code", "free tools", "VS Code"]
 ---

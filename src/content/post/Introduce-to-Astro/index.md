@@ -1,5 +1,5 @@
 ---
-title: "چرا Astro فوق‌العاده سریعه: نگاهی عمیق به این فریم‌ورک مدرن"
+title: "چرا Astro فوق‌العاده سریعه "
 description: "بررسی کامل architecture، مزایای performance و اینکه چرا Astro طرز فکرمون رو نسبت به web development عوض کرده"
 publishDate: "14 Aug 2025"
 tags: ["astro", "performance", "islands-architecture", "web-development"]

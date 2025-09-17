@@ -1,5 +1,5 @@
 ---
-title: "آموزش کامل Zod: راهنمای جامع TypeScript Schema Validation"
+title: "آموزش کامل Zod: راهنمای جامع"
 description: "یاد بگیرید چطور با Zod validation قدرتمند و type-safe برای TypeScript بسازید؛ از مقدماتی تا پیشرفته با مثال‌های عملی"
 publishDate: "14 Sep 2024"
 updatedDate: "03 Mar 2025"
