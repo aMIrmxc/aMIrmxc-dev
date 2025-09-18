@@ -1,5 +1,11 @@
 # aMIrmxc-dev Blog
 
+
+<div align="center">
+  <img src="public/icon2.png" alt="aMIrmxc Blog"  width="600" height="600 "/>
+</div>
+
+
 This is a personal blog built with Astro.js.
 
 ## Development
@@ -38,6 +44,4 @@ npm run deploy
 - `src/components/` - UI components
 - `src/layouts/` - Page layouts
 
-## License
 
-MIT
