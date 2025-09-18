@@ -26,7 +26,6 @@ import { expressiveCodeOptions, siteConfig } from "./src/site.config";
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.url,
-	base: '/aMIrmxc-dev',
 	output: 'static',
 	
 	image: {

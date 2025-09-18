@@ -27,7 +27,7 @@ export const siteConfig: SiteConfig = {
 	*/
 	title: "aMIrmxc-dev ⚙",
 	// ! Please remember to replace the following site property with your own domain, used in astro.config.ts
-	url: 'https://amirmxc.github.io/aMIrmxc-dev',
+	url: 'https://amirmxc.ir',
 };
 
 // Used to generate links in both the Header & Footer.
