@@ -19,9 +19,15 @@ import { remarkGithubCard } from "./src/plugins/remark-github-card";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time";
 import { expressiveCodeOptions, siteConfig } from "./src/site.config";
 
+
+
+
+
 // https://astro.build/config
 export default defineConfig({
 	site: siteConfig.url,
+	base: '/aMIrmxc-dev',
+	output: 'static',
 	
 	image: {
 		domains: ["webmention.io"],
