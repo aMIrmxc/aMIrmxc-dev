@@ -1,9 +1,10 @@
 ---
 title: Hello, Welcome
-description: An introduction to using the note feature in Astro mxc
+description: An introduction to the amirmxc's Astro Blog.
 publishDate: "2024-10-14T11:23:00Z"
 ---
 
-Hi, Hello. This is an example note feature included with amirmxc's blog.
+This is an example of amirmxc's blog.
 
-They're for shorter, concise "post's" , they generally don't include headings
+Curious how everything works under the hood?  
+You can view the source code of this blog—built with the Astro framework—on my GitHub page.
