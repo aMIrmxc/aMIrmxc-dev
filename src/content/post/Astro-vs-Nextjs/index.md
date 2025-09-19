@@ -7,7 +7,7 @@ tags: ["astro", "nextjs", "performance", "react", "ssr", "ssg"]
 
 
 
-# Astro vs Next.js: کدومو برای پروژت انتخاب کنی؟
+# Astro vs Next.js: کدوم را برای پروژمان انتخاب کنیم؟
 
 وقتی میخوای یه وب‌سایت یا وب اپ بسازی، انتخاب framework درست میتونه تو موفقیت پروژت تاثیر زیادی داشته باشه. دوتا از محبوب‌ترین گزینه‌هایی که همیشه تو بحث‌ها میان Astro و Next.js هستن. هر دوتاشون نقاط قوت خودشونو دارن، ولی درک تفاوت‌هاشون برای تصمیم‌گیری درست خیلی مهمه.
 
@@ -103,7 +103,7 @@ import { useState, useEffect } from 'react'
 
 export default function Blog() {
   const [posts, setPosts] = useState([])
-  
+
   useEffect(() => {
     fetch('/api/posts')
       .then(r => r.json())
@@ -165,7 +165,7 @@ import UserProfile from '../components/UserProfile'
 
 export default function Dashboard() {
   const [user, setUser] = useState(null)
-  
+
   return (
     <div>
       <CustomButton onClick={() => console.log('فقط React')}>
@@ -277,7 +277,7 @@ export default defineConfig({
 - **integration های third-party کمتر** نسبت به Next.js
 - **توسعه سریع** و اضافه شدن قابلیت‌های جدید
 
-## کی کدوم Framework رو انتخاب کنی
+## کی کدوم Framework رو انتخاب کنیم
 
 ### Astro رو انتخاب کن وقتی:
 
@@ -314,14 +314,14 @@ const features = await fetchFeatures()
         <a href="#pricing">قیمت‌گذاری</a>
       </nav>
     </header>
-    
+
     <main>
       <section id="hero">
         <h1>سایت‌های فوق‌العاده سریع</h1>
         <p>با Astro سریع‌تر بساز</p>
         <ContactForm client:load />
       </section>
-      
+
       <section id="features">
         {features.map(feature => (
           <div class="feature">
@@ -478,10 +478,9 @@ export default function App({ Component, pageProps }) {
 
 ## نتیجه‌گیری
 
-هم Astro و هم Next.js framework های عالی هستن، ولی هر کدوم برای مقاصد مختلف:
+هم Astro و هم Next.js عالی هستن، ولی هر کدوم برای مقاصد مختلف:
 
 **Astro رو انتخاب کن** اگه سایت‌های محتوا محور میسازی که performance و سادگی برات مهمه. برای سایت‌های marketing، بلاگ‌ها و سایت‌های کسب‌وکارهای کوچک که میخوای JavaScript کم و loading سریع داشته باشی عالیه.
 
 **Next.js رو انتخاب کن** اگه اپلیکیشن‌های interactive میسازی که به state management پیچیده، authentication، API route ها یا سایر قابلیت‌های full-stack نیاز دارن. برای dashboard ها، سایت‌های e-commerce و اپلیکیشن‌هایی که user interactivity کلیدیه ایده‌آله.
 
-یادت باشه، انتخاب "درست" کاملا بستگی به نیازهای پروژت، تخصص تیمت و ملاحظات نگهداری بلندمدتت داره. هر دو framework فعالانه maintain میشن و آینده روشنی دارن.

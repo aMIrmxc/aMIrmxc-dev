@@ -10,21 +10,9 @@ tags: ["express", "nodejs", "backend", "javascript", "middleware", "routing"]
 
 # آموزش کامل Express.js: از مبانی تا قابلیت‌های پیشرفته
 
-اگه داری با JavaScript backend می‌سازی، احتمالاً باید از Express.js استفاده کنی. تو این راهنمای کامل، همه چیزی که باید در مورد Express بدونی رو یاد می‌گیری، حتی چند تا فیچر پیشرفته‌ای که کم تو آموزش‌های دیگه دیده میشه.
+اگه داری با JavaScript بک اند می‌سازی، احتمالاً  از Express.js استفاده می کنی. تو این راهنمای کامل، همه چیزی که باید در مورد Express بدونی رو دوره می کنیم، و حتی چند تا فیچر پیشرفته‌ای که کم تو آموزش‌های دیگه دیده میشه.
 
-## فهرست مطالب
-1. [شروع کار با Express.js](#getting-started)
-2. [ساخت اولین سرور](#first-server)
-3. [درک کردن Route ها](#routes)
-4. [کار با Response Methods](#responses)
-5. [استفاده از View Engine با EJS](#view-engines)
-6. [سازماندهی کد با Router ها](#routers)
-7. [Route های پویا و Parameter ها](#dynamic-routes)
-8. [تکنیک‌های پیشرفته Routing](#advanced-routing)
-9. [درک کردن Middleware](#middleware)
-10. [Middleware های داخلی](#built-in-middleware)
-11. [کار با داده‌های Form](#form-data)
-12. [Query Parameter ها](#query-parameters)
+
 
 ## شروع کار با Express.js {#getting-started}
 
@@ -178,7 +166,7 @@ app.get('/', (req, res) => {
     <h1>Hello <%= text %></h1>
     <!-- می‌تونی کد JavaScript هم بنویسی -->
     <p>2 + 2 = <%= 2 + 2 %></p>
-    
+
     <!-- variable های undefined رو ایمن handle کن -->
     <p>Name: <%= locals.name || 'Default Name' %></p>
 </body>
@@ -235,7 +223,7 @@ app.listen(3000);
 
 این کار route هایی مثل اینا می‌سازه:
 - GET `/users/` → User list
-- GET `/users/new` → New user form  
+- GET `/users/new` → New user form
 - POST `/users/` → Create user
 
 ## Route های پویا و Parameter ها {#dynamic-routes}
@@ -302,10 +290,10 @@ const users = [
 // هروقت parameter :id پیدا شد اجرا میشه
 router.param('id', (req, res, next, id) => {
   console.log(`Looking for user with ID: ${id}`);
-  
+
   // user رو از database/array بگیر
   req.user = users[id];
-  
+
   // به middleware/route بعدی برو
   next();
 });
@@ -424,7 +412,7 @@ app.use(express.json());
 </head>
 <body>
     <form action="/users" method="POST">
-        <input type="text" name="firstName" placeholder="First Name" 
+        <input type="text" name="firstName" placeholder="First Name"
                value="<%= locals.firstName || '' %>" required>
         <button type="submit">Create User</button>
     </form>
@@ -444,14 +432,14 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
   const isValid = true; // منطق validation تو اینجا
-  
+
   if (isValid) {
     // user رو بساز
     const newUser = {
       firstName: req.body.firstName
     };
     users.push(newUser);
-    
+
     // به صفحه user redirect کن
     const userId = users.length - 1;
     res.redirect(`/users/${userId}`);
@@ -482,12 +470,12 @@ Query parameter ها بخشی از URL بعد از علامت `?` هستن:
 router.get('/', (req, res) => {
   const name = req.query.name;
   const age = req.query.age;
-  
+
   // یا با استفاده از destructuring
   const { name, age } = req.query;
-  
+
   console.log(`Name: ${name}, Age: ${age}`);
-  
+
   res.send(`Hello ${name || 'Anonymous'}`);
 });
 ```
@@ -555,7 +543,7 @@ router.get('/new', (req, res) => {
 
 router.post('/', (req, res) => {
   const isValid = req.body.firstName && req.body.firstName.trim() !== '';
-  
+
   if (isValid) {
     users.push({ firstName: req.body.firstName });
     res.redirect(`/users/${users.length - 1}`);
@@ -637,6 +625,6 @@ Express.js یه framework قوی و انعطاف‌پذیره که ساخت web 
 - کار با route های پویا و parameter ها
 - استفاده از view engine ها برای server-side rendering
 
-با این مبانی، برای ساخت web application ها و API های محکم آماده‌ای. همونطور که به یادگیری ادامه می‌دی، موضوعاتی مثل authentication، یکپارچگی database، testing، و deployment رو بررسی کن تا application های آماده production بسازی.
+با این مبانی، برای ساخت web application ها و API ها آماده‌ای. همونطور که به برسی ادامه می‌دی، موضوعاتی مثل authentication، یکپارچگی database، testing، و deployment رو بررسی کن تا application های آماده production بسازی.
 
-یادت باشه که Express.js از طریق اکوسیستم middleware اش خیلی قابل گسترشه. npm registry هزاران package middleware داره که می‌تونن قابلیت‌هایی مثل authentication، logging، rate limiting، و خیلی چیزهای دیگه رو به application تو اضافه کنن. 
+یادت باشه که Express.js از طریق اکوسیستم middleware اش خیلی قابل گسترشه. npm registry هزاران package middleware داره که می‌تونن قابلیت‌هایی مثل authentication، logging، rate limiting، و خیلی چیزهای دیگه رو به application تو اضافه کنن.

@@ -1,5 +1,5 @@
 ---
-title: "معرفی همه  React Hooks "
+title: "معرفی همه  React Hook ها "
 description: "مرجع جامع  برای آشنایی با تمام Hook های React، کاربرد و مثال عملی هرکدام"
 publishDate: "15 Apr 2024"
 updatedDate: "03 Jan 2025"
@@ -7,7 +7,7 @@ tags: ["React", "Hooks", "JavaScript", "Frontend"]
 ---
 
 
-# راهنمای کامل React Hooks: همه‌ی Hook ها با مثال
+# برسی کامل React Hooks: همه‌ی Hook ها با مثال
 
 اگه می‌خوای با React برنامه بسازی، حتماً باید با Hook ها آشنا بشی. اینا واقعاً شیوه‌ی کار کردن با React رو متحول کردن و یه approach تابعی‌تر به مدیریت state و side effect ها دادن بهمون. چه تازه شروع کرده باشی چه بخوای دونسته‌هاتو تعمیق بدی، این راهنما همه چیزی که باید بدونی رو پوشش میده.
 
@@ -23,6 +23,26 @@ React Hook ها رو می‌تونیم به هشت دسته‌ی اصلی تقس
 6. **Transition Hooks** - برای مدیریت transition ها و بهتر کردن UX
 7. **Random Hooks** - Hook های کاربردی برای موارد خاص
 8. **React 19 Hooks** - Hook های جدید و قدرتمند
+
+
+
+## جدول میزان رایج بودن هرکدام از Hook ها
+
+- **useState** ⭐⭐⭐⭐⭐ - مداوم برای state کامپوننت
+- **useEffect** ⭐⭐⭐ - کم، عمدتاً برای همگام‌سازی با browser API
+- **useRef** ⭐⭐⭐⭐ - رایج برای DOM ref ها و value های قابل تغییر
+- **useContext** ⭐⭐⭐⭐ - ضروری برای استفاده از context
+- **useMemo/useCallback** ⭐⭐⭐ - وقتی بهینه‌سازی performance نیاز داشته باشی
+- **useReducer** ⭐⭐⭐ - برای logic های state پیچیده
+- **useTransition/useDeferredValue** ⭐⭐ - برای UI های حساس به performance
+- **useId** ⭐⭐ - برای accessibility و form ها
+- **useLayoutEffect** ⭐⭐ - نادر، برای اندازه‌گیری DOM
+- **useImperativeHandle** ⭐ - خیلی نادر، سازندگان کتابخونه
+- **useDebugValue** ⭐ - فقط برای توسعه
+- **useSyncExternalStore** ⭐ - فقط سازندگان کتابخونه
+- **useInsertionEffect** ⭐ - فقط کتابخونه‌های CSS-in-JS
+
+
 
 ## State Management Hooks
 
@@ -46,7 +66,7 @@ function Counter() {
       <button onClick={() => setCount(count + 1)}>
         افزایش
       </button>
-      
+
       {isVisible && <p>این شرطی نمایش داده میشه!</p>}
       <button onClick={() => setIsVisible(!isVisible)}>
         تغییر وضعیت نمایش
@@ -135,16 +155,16 @@ import { useSyncExternalStore } from 'react';
 const store = {
   state: { count: 0 },
   listeners: new Set(),
-  
+
   getState() {
     return this.state;
   },
-  
+
   subscribe(listener) {
     this.listeners.add(listener);
     return () => this.listeners.delete(listener);
   },
-  
+
   setState(newState) {
     this.state = { ...this.state, ...newState };
     this.listeners.forEach(listener => listener());
@@ -239,9 +259,9 @@ function MeasuredTooltip() {
 
   return (
     <div>
-      <div 
+      <div
         ref={tooltipRef}
-        style={{ 
+        style={{
           position: 'absolute',
           top: `-${tooltipHeight + 10}px` // موقعیت بر اساس ارتفاع اندازه‌گیری شده
         }}
@@ -269,7 +289,7 @@ function useCSS(css) {
     const style = document.createElement('style');
     style.textContent = css;
     document.head.appendChild(style);
-    
+
     return () => {
       document.head.removeChild(style);
     };
@@ -312,7 +332,7 @@ function TimerComponent() {
       <p>تایمر: {seconds} ثانیه</p>
       <button onClick={startTimer}>شروع</button>
       <button onClick={stopTimer}>توقف</button>
-      
+
       <input ref={inputRef} placeholder="روی من فوکوس کن!" />
       <button onClick={focusInput}>فوکوس Input</button>
     </div>
@@ -440,7 +460,7 @@ function CallbackExample() {
       <p>تعداد: {count}</p>
       <Button onClick={increment}>افزایش</Button>
       <Button onClick={decrement}>کاهش</Button>
-      
+
       <p>State دیگر: {otherState}</p>
       <button onClick={() => setOtherState(otherState + 1)}>
         بروزرسانی State دیگر
@@ -524,7 +544,7 @@ function SearchableList({ items }) {
 
   const handleSearch = (value) => {
     setQuery(value); // آپدیت فوری - بلافاصله اپدیت میشه
-    
+
     startTransition(() => {
       // آپدیت غیرفوری - میتونه interrupt بشه
       const filtered = items.filter(item =>
@@ -542,9 +562,9 @@ function SearchableList({ items }) {
         onChange={(e) => handleSearch(e.target.value)}
         placeholder="جستجوی آیتم‌ها..."
       />
-      
+
       {isPending && <p>در حال فیلتر کردن...</p>}
-      
+
       <ul style={{ opacity: isPending ? 0.5 : 1 }}>
         {filteredItems.map((item, index) => (
           <li key={index}>{item}</li>
@@ -581,9 +601,9 @@ function DeferredSearch({ items }) {
         onChange={(e) => setQuery(e.target.value)}
         placeholder="جستجوی آیتم‌ها..."
       />
-      
+
       <p>جستجو برای: {deferredQuery}</p>
-      
+
       <ul>
         {filteredItems.map((item, index) => (
           <li key={index}>{item}</li>
@@ -607,7 +627,7 @@ import { useState, useDebugValue } from 'react';
 
 function useCounter(initialValue = 0) {
   const [count, setCount] = useState(initialValue);
-  
+
   // تو React DevTools "Counter: 5" نمایش میده
   useDebugValue(count, count => `Counter: ${count}`);
 
@@ -661,25 +681,7 @@ function RegistrationForm() {
 }
 ```
 
-## خلاصه کلی
-
-### جدول میزان استفاده Hook ها
-
-- **useState** ⭐⭐⭐⭐⭐ - مداوم برای state کامپوننت
-- **useEffect** ⭐⭐⭐ - کم، عمدتاً برای همگام‌سازی با browser API
-- **useRef** ⭐⭐⭐⭐ - رایج برای DOM ref ها و value های قابل تغییر
-- **useContext** ⭐⭐⭐⭐ - ضروری برای استفاده از context
-- **useMemo/useCallback** ⭐⭐⭐ - وقتی بهینه‌سازی performance نیاز داشته باشی
-- **useReducer** ⭐⭐⭐ - برای logic های state پیچیده
-- **useTransition/useDeferredValue** ⭐⭐ - برای UI های حساس به performance
-- **useId** ⭐⭐ - برای accessibility و form ها
-- **useLayoutEffect** ⭐⭐ - نادر، برای اندازه‌گیری DOM
-- **useImperativeHandle** ⭐ - خیلی نادر، سازندگان کتابخونه
-- **useDebugValue** ⭐ - فقط برای توسعه
-- **useSyncExternalStore** ⭐ - فقط سازندگان کتابخونه
-- **useInsertionEffect** ⭐ - فقط کتابخونه‌های CSS-in-JS
-
-### بهترین Practice ها
+### Best Practice ها
 
 1. **با useState شروع کن** برای مدیریت state ساده
 2. **از useEffect برای event handling و data fetching اجتناب کن**

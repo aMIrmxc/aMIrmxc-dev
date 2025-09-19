@@ -216,7 +216,7 @@ This JavaScript function isn't working correctly. Can you help me fix it?
   - completion های سریع
   - refactoring ساده
   - توضیحات پایه
-  
+
 - از **Plus** استفاده کن برای:
   - الگوریتم‌های پیچیده
   - تصمیمات معماری
@@ -284,10 +284,3 @@ This JavaScript function isn't working correctly. Can you help me fix it?
 ---
 
 *این راهنما بهت کمک کرد؟ برای آموزش‌های بیشتر در مورد AI-assisted development و ابزارهای open-source دنبال کن. Happy coding!*
-
-## منابع
-
-- [Qwen Code CLI GitHub](https://github.com/QwenLM/qwen-code)
-- [مستندات Kilo Code](https://kilocode.ai/docs)
-- [Kilo Code VS Code Extension](https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code)
-- [پلتفرم Qwen AI](https://qwen.ai)

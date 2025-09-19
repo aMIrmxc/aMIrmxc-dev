@@ -1,12 +1,12 @@
 ---
-title: "راهنمای کامل React: مفاهیم به زبان ساده"
+title: "راهنمای کامل React به زبان ساده"
 description: "این پست تمام مفاهیم اساسی React را از componentها و JSX گرفته تا Context، Portals و Error Boundaries با مثال‌های عملی و توضیحات ساده پوشش می‌دهد"
 publishDate: "15 Apr 2024"
 updatedDate: "03 Jan 2025"
 tags: ["React", "JavaScript", "Frontend", "Tutorial"]
 ---
 
-# راهنمای کامل React: همه مفاهیم به زبان ساده
+# همه مفاهیم React js به زبان ساده
 
 React یه کتابخانه قدرتمند JavaScript هست که طریقه ساخت رابط کاربری رو کاملاً عوض کرده. اگرچه اصطلاحات خاص خودش مثل reconciliation، composition و error boundaries داره، اما فهمیدن این مفاهیم کلید تسلط روی React هست. این راهنمای جامع قراره همه مفاهیم اساسی React رو با مثال‌های عملی و توضیحات ساده برات شرح بده.
 
@@ -16,13 +16,13 @@ React یه کتابخانه قدرتمند JavaScript هست که طریقه س�
   - [فهرست مطالب](#فهرست-مطالب)
   - [Component ها: قطعات سازنده](#component-ها-قطعات-سازنده)
   - [JSX: JavaScript با لباس HTML](#jsx-javascript-با-لباس-html)
-    - [قوانین کلیدی JSX:](#قوانین-کلیدی-jsx)
+    - [قوانین کلیدی JSX](#قوانین-کلیدی-jsx)
     - [React Fragments](#react-fragments)
   - [Props: انتقال داده بین Component ها](#props-انتقال-داده-بین-component-ها)
     - [Props مخصوص Children](#props-مخصوص-children)
     - [Props مخصوص Key](#props-مخصوص-key)
   - [فرآیند Rendering](#فرآیند-rendering)
-    - [فرآیند Virtual DOM:](#فرآیند-virtual-dom)
+    - [فرآیند  Virtual DOM](#فرآیند-virtual-dom)
   - [Event Handling](#event-handling)
   - [State Management](#state-management)
     - [Hook مخصوص useState](#hook-مخصوص-usestate)
@@ -33,7 +33,7 @@ React یه کتابخانه قدرتمند JavaScript هست که طریقه س�
     - [۳. Ref Hooks](#۳-ref-hooks)
     - [۴. Effect Hooks](#۴-effect-hooks)
     - [۵. Performance Hooks](#۵-performance-hooks)
-  - [خلوص Component ها](#خلوص-component-ها)
+  - [ Component ها](#خلوص-component-ها)
     - [Strict Mode](#strict-mode)
   - [Effects و Side Effects](#effects-و-side-effects)
   - [Refs: دسترسی مستقیم به DOM](#refs-دسترسی-مستقیم-به-dom)
@@ -100,7 +100,7 @@ function ButtonWithoutJSX() {
 ```jsx
 function UserCard({ user }) {
   const isOnline = user.lastSeen < Date.now() - 300000; // 5 دقیقه
-  
+
   return (
     <div className="user-card">
       <h2>{user.name}</h2>
@@ -158,7 +158,7 @@ function BlogPost({ title, content, author, publishDate }) {
 // استفاده
 function App() {
   return (
-    <BlogPost 
+    <BlogPost
       title="یادگیری React"
       content="React برای ساخت UI عالیه..."
       author="علی احمدی"
@@ -400,7 +400,7 @@ Hook ها بهت اجازه میدن که از قابلیت‌های React دا�
 - `useState`: مدیریت state محلی component
 - `useReducer`: مدیریت state پیچیده با الگوی reducer
 
-### ۲. Context Hooks  
+### ۲. Context Hooks
 - `useContext`: دسترسی به مقادیر React context
 
 ### ۳. Ref Hooks
@@ -428,7 +428,7 @@ function OptimizedComponent({ items }) {
 
   // useMemo برای محاسبات گران
   const filteredItems = useMemo(() => {
-    return items.filter(item => 
+    return items.filter(item =>
       item.name.toLowerCase().includes(filter.toLowerCase())
     );
   }, [items, filter]);
@@ -452,7 +452,7 @@ function OptimizedComponent({ items }) {
         placeholder="فیلتر آیتم‌ها..."
       />
       <button onClick={focusInput}>فوکوس روی Input</button>
-      
+
       <p>شمارنده: {count}</p>
       <button onClick={() => setCount(c => c + 1)}>افزایش</button>
 
@@ -489,7 +489,7 @@ function PureCounter({ count }) {
 // ✅ Component خالص با state
 function PureCounterWithState() {
   const [count, setCount] = useState(0);
-  
+
   return (
     <div>
       <div>شمارنده: {count}</div>
@@ -735,8 +735,8 @@ function App() {
         باز کردن Modal
       </button>
 
-      <Modal 
-        isOpen={isModalOpen} 
+      <Modal
+        isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
       >
         <h2>محتوای Modal</h2>
@@ -770,7 +770,7 @@ function App() {
   return (
     <div>
       <h1>اپلیکیشن من</h1>
-      
+
       <Suspense fallback={<LoadingSpinner />}>
         <LazyComponent />
       </Suspense>
@@ -849,7 +849,7 @@ function App() {
 نکات کلیدی:
 
 - **با component ها و props شروع کن** برای ساخت UI پایه
-- **از state و effects استفاده کن** برای رفتار پویا  
+- **از state و effects استفاده کن** برای رفتار پویا
 - **Hook ها رو بکار ببر** برای منطق قابل استفاده مجدد
 - **از context استفاده کن** برای state کل اپ
 - **Error boundaries پیاده کن** برای مقاومت
