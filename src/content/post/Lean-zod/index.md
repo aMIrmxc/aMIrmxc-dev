@@ -1,6 +1,6 @@
 ---
-title: "آموزش کامل Zod: راهنمای جامع"
-description: "یاد بگیرید چطور با Zod validation قدرتمند و type-safe برای TypeScript بسازید؛ از مقدماتی تا پیشرفته با مثال‌های عملی"
+title: "برسی Zod: TypeScript Schema Validation"
+description: "یاد بگیرید چطور با Zod validation قدرتمند و type-safe برای TypeScript بسازید؛ با مثال‌های عملی"
 publishDate: "14 Sep 2024"
 updatedDate: "03 Mar 2025"
 tags: ["typescript", "zod", "validation", "schema", "type-safety"]
@@ -9,7 +9,7 @@ tags: ["typescript", "zod", "validation", "schema", "type-safety"]
 
 
 
-# آموزش کامل Zod : راهنمای جامع TypeScript Schema Validation
+# برسی کامل Zod : راهنمای جامع TypeScript Schema Validation
 
 Zod داره به سرعت تبدیل به اول انتخاب توسعه‌دهنده‌های TypeScript میشه، و دلیلش هم مشخصه. این TypeScript-first schema validation library قدرت runtime validation رو با compile-time type safety ترکیب میکنه و یه ابزار فوق‌العاده ارزشمند برای web development مدرن محسوب میشه.
 
@@ -529,7 +529,7 @@ if (!result.success) {
 }
 ```
 
-## بهترین روش‌ها
+## Best Practice ها
 
 ### ۱. از Type Inference استفاده کنید
 
@@ -565,7 +565,7 @@ const statusSchema = z.enum(statuses);
 ```typescript
 function validateUserInput(input: unknown) {
   const result = userSchema.safeParse(input);
-  
+
   if (result.success) {
     return { data: result.data };
   } else {
@@ -602,7 +602,7 @@ const signupSchema = z.object({
   email: z.string().email("لطفاً یه email معتبر وارد کنید"),
   password: z.string()
     .min(8, "Password حداقل باید ۸ کاراکتر باشه")
-    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/, 
+    .regex(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)/,
            "Password باید شامل حروف بزرگ، کوچک و عدد باشه"),
   confirmPassword: z.string()
 }).refine((data) => data.password === data.confirmPassword, {
@@ -628,9 +628,9 @@ const apiResponseSchema = z.object({
 async function fetchUsers() {
   const response = await fetch('/api/users');
   const rawData = await response.json();
-  
+
   const result = apiResponseSchema.safeParse(rawData);
-  
+
   if (result.success) {
     return result.data;
   } else {
@@ -653,7 +653,7 @@ const env = envSchema.parse(process.env);
 // حالا env کاملاً typed و validate شدس!
 ```
 
-## نتیجه‌گیری
+## سخن پایانی
 
 Zod یه ابزار قدرتمنده که شکاف بین runtime validation و compile-time type safety رو در TypeScript پر میکنه. با تعریف schema هاتون یه بار با Zod، هم validation و هم type ها رو دریافت میکنید و نیازی به نگهداری جداگانه منطق validation و تعاریف type نیست.
 
@@ -665,12 +665,3 @@ Zod یه ابزار قدرتمنده که شکاف بین runtime validation و 
 4. **schema ها رو compose کنید** - validation پیچیده رو از قطعات کوچکتر و قابل استفاده مجدد بسازید
 5. **validation سفارشی** - از `refine()` برای validation منطق کسب‌وکار استفاده کنید
 
-چه داشته باشید form input ها، API response ها یا environment variable ها رو validate کنید، Zod ابزارهایی که نیاز دارید رو در اختیارتون قرار میده تا مطمئن بشید داده‌هاتون هم valid و هم type-safe هستن. همین امروز شروع به استفاده از Zod در پروژه‌های TypeScript تون کنید و اعتماد به نفسی که از runtime-validated، type-safe code به دست میاد رو تجربه کنید.
-
-## منابع بیشتر
-
-- [مستندات رسمی Zod](https://zod.dev/)
-- [GitHub Repository Zod](https://github.com/colinhacks/zod)
-- [zod-validation-error Library](https://www.npmjs.com/package/zod-validation-error)
-
-موفق باشید با Zod! 🚀

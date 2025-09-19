@@ -1,5 +1,5 @@
 ---
-title: "آموزش جامع و سریع  Docker"
+title: "برسی جامع و سریع  Docker"
 description: "یاد بگیرید چگونه با Docker اپلیکیشن‌های خود را در قالب کانتینر بسته‌بندی کرده و در هر محیطی بدون نگرانی اجرا کنید"
 publishDate: "15 Apr 2023"
 updatedDate: "03 Jan 2025"
@@ -7,12 +7,11 @@ tags: ["Docker", "Container", "DevOps"]
 ---
 
 
-# راهنمای جامع Docker: از صفر تا صد
+# برسی جامع Docker: از صفر تا صد
 
 ## مقدمه
 
-Docker یکی از مهم‌ترین ابزارهای توسعه نرم‌افزار مدرن است که شیوه توسعه، تست و استقرار اپلیکیشن‌ها را کاملاً متحول کرده است. در این مقاله جامع، تمام مفاهیم اساسی Docker را از صفر یاد خواهید گرفت.
-
+Docker یکی از مهم‌ترین ابزارهای توسعه نرم‌افزار مدرن است که شیوه توسعه، تست و استقرار اپلیکیشن‌ها را کاملاً متحول کرده است. در این مقاله جامع، تمام مفاهیم اساسی Docker را از صفر برسی خواهیم کرد.
 ## 1. مفاهیم پایه
 
 ### چرا Docker؟ تفاوت با VM چیست؟
@@ -336,7 +335,7 @@ services:
       - db
     environment:
       - DATABASE_URL=postgresql://user:password@db:5432/myapp
-    
+
   db:
     image: postgres:13
     environment:
@@ -505,13 +504,13 @@ services:
     image: nginx
     networks:
       - frontend-network
-  
+
   backend:
     image: node:16
     networks:
       - frontend-network
       - backend-network
-  
+
   database:
     image: postgres:13
     networks:

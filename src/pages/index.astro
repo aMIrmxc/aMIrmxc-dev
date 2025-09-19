@@ -24,10 +24,9 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
 	<section>
 		<h1 class="title mb-6">Hello There!</h1>
 		<p class="mb-4">
-			I’m Amir, a software developer focused on the JavaScript ecosystem. Here I share
-			ideas, experiments, and practical lessons I’ve found genuinely useful in real projects.
-			Interested in contributing or collaborating? Reach out
-			and let’s build together.
+			I’m Amir, a software developer focused on the JavaScript ecosystem. Here I share ideas,
+			experiments, and practical lessons I’ve found genuinely useful in real projects. Interested in
+			contributing or collaborating? Reach out and let’s build together.
 		</p>
 		<SocialList />
 	</section>
@@ -42,6 +41,10 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
 				))
 			}
 		</ul>
+		<h2 class="title text-accent mb-6 text-xl  p-5">
+			<a class=" min-w-30 font-semibold text-gray-600 dark:text-gray-400" href="/posts/"
+				>See All Posts →</a>
+		</h2>
 	</section>
 	{
 		latestNotes.length > 0 && (

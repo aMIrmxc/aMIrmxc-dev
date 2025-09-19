@@ -1,5 +1,5 @@
 ---
-title: "Next.js 15 راهنمای "
+title: "Next.js 15 برسی "
 description: "هر آنچه برای ارتقاء به Next.js 15 نیاز دارید؛ از Codemod خودکار تا breaking changeهای caching و async APIها"
 publishDate: "14 Aug 2024"
 updatedDate: "03 Mar 2025"
@@ -8,7 +8,7 @@ tags: ["Next.js", "Migration", "React-19", "Turbopack", "Caching", "Async-APIs"]
 
 
 
-# Next.js 15: هر چیزی که باید بدونی - راهنمای کامل Migration
+# Next.js 15: هر چیزی که باید بدونی
 
 Next.js 15 بالاخره منتشر شد و یه سری تغییرات فوق‌العاده مهم و breaking change داره که واقعاً ارزش upgrade کردن رو داره. تو این راهنمای کامل قراره همه چیز رو بگم - از نحوه upgrade گرفته تا feature های جدید و تغییراتی که روی workflow شما تاثیر میذاره.
 
@@ -22,7 +22,7 @@ npx @next/codemod@canary upgrade latest
 
 این command:
 - Version های Next.js و React رو update میکنه
-- کدهای شما رو طوری تغییر میده که با breaking change های جدید سازگار باشه  
+- کدهای شما رو طوری تغییر میده که با breaking change های جدید سازگار باشه
 - ESLint و dependency های دیگه رو هم update میکنه
 - تنظیمات لازم رو اعمال میکنه
 
@@ -57,7 +57,7 @@ export default async function Page() {
 // app/blog/[id]/page.js
 export default async function BlogPost({ params }) {
   const { id } = await params;
-  
+
   return (
     <div>
       <h1>Blog Post ID: {id}</h1>
@@ -209,14 +209,14 @@ import { unstable_after as after } from 'next/server';
 export async function saveUser(userData) {
   // این فوری اجرا میشه و response رو block میکنه
   const user = await createUser(userData);
-  
+
   // این بعد از فرستادن response اجرا میشه (non-blocking)
   after(async () => {
     await sendWelcomeEmail(user.email);
     await logUserCreation(user.id);
     await updateAnalytics(user);
   });
-  
+
   return user;
 }
 ```
@@ -299,13 +299,13 @@ export async function createUser(formData) {
   // این یه action ID منحصربفرد و متغیر برای امنیت میگیره
   const name = formData.get('name');
   const email = formData.get('email');
-  
+
   // همیشه input ها رو validate و sanitize کن!
   // Server action ها هنوز هم public API هستن
   if (!name || !email) {
     throw new Error('Missing required fields');
   }
-  
+
   // منطق امن شما اینجا
   return await saveUser({ name, email });
 }
@@ -328,17 +328,17 @@ export async function createUser(formData) {
 
 function ProblematicComponent() {
   const [mounted, setMounted] = useState(false);
-  
+
   useEffect(() => {
     setMounted(true);
   }, []);
-  
+
   // حالا پیام های خطای واضح‌تری نشون میده
   return <div>{mounted ? 'Client' : 'Server'}</div>;
 }
 ```
 
-## بهبودهای اضافی
+## بهبودهای دیگر
 
 ### پشتیبانی از ESLint 9
 
@@ -477,7 +477,7 @@ Next.js 15 یه بهبود قابل توجه نسبت به version 14 محسوب
 
 **نکات کلیدی:**
 - Caching حالا opt-in هست به جای opt-out
-- Request API ها async شدن برای static rendering بهتر  
+- Request API ها async شدن برای static rendering بهتر
 - تجربه development به طور قابل توجهی بهبود یافته
 - Migration بیشترش خودکار شده با codemod ها
 

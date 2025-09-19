@@ -10,14 +10,14 @@ tags: ["astro", "react", "migration", "performance", "islands-architecture"]
 
 در دنیای توسعه وب امروز، فریم‌ورک‌های زیادی وجود دارن که هر کدوم برای هدف خاصی ساخته شدن. از **React** و **Vue** گرفته تا **Next.js** و **SvelteKit**. اما در این میان، یک فریم‌ورک جدید و قدرتمند به نام **Astro** خیلی سریع توجه برنامه‌نویس‌ها رو به خودش جلب کرده.
 
-چرا؟ 🤔  
+چرا؟ 🤔
 چون Astro با یک فلسفه متفاوت وارد میدان شده:
 
 > **"ساخت وب‌سایت‌های سریع با کمترین جاوااسکریپت ممکن."**
 
- 
 
-### 🌟 Astro چیست؟
+
+### Astro چیست؟
 
 Astro یک **Static Site Builder** و در عین حال یک **SSR Framework** است. یعنی:
 
@@ -27,9 +27,9 @@ Astro یک **Static Site Builder** و در عین حال یک **SSR Framework** 
 
 به زبان ساده: شما با Astro می‌تونید سریع‌ترین وب‌سایت‌ها رو بسازید، بدون اینکه کل صفحه پر از جاوااسکریپت بشه.
 
- 
 
-### 🚀 چرا Astro بهتره؟
+
+### چرا Astro بهتره؟
 
 - سرعت فوق‌العاده بالا (چون بیشتر خروجی HTML استاتیکه).
 - SEO عالی (چون محتوای واقعی از سمت سرور رندر میشه).
@@ -38,14 +38,14 @@ Astro یک **Static Site Builder** و در عین حال یک **SSR Framework** 
 - ساختار ساده با **File-based Routing**.
 
 
-### 🔥 تفاوت اصلی Astro و React
+### تفاوت اصلی Astro و React
 
 - در **React** کل صفحه جاوااسکریپت میشه (حتی بخش‌هایی که داینامیک نیستن).
 - در **Astro** فقط همون بخش‌هایی که نیاز دارن (مثل یک دکمه یا فرم) به React/Vue تبدیل میشن، و بقیه صفحه HTML خالصه.
 
 این یعنی وب‌سایت سریع‌تر، سبک‌تر و بهینه‌تر برای موتورهای جستجو.
 
-اگر تا الان برای پروژه‌های شخصی یا کاری از **React یا Next.js** استفاده می‌کردید، وقتشه Astro رو هم امتحان کنید.  
+اگر تا الان برای پروژه‌های شخصی یا کاری از **React یا Next.js** استفاده می‌کردید، وقتشه Astro رو هم امتحان کنید.
 این فریم‌ورک مخصوصاً برای موارد زیر عالیه:
 
 - بلاگ‌ها و سایت‌های محتوایی 📖
@@ -83,7 +83,7 @@ src/
 
 - هر چیزی در پوشه **pages/** تبدیل به یک مسیر (route) میشه.
 
- 
+
 
 # 🔹 اولین صفحه در Astro
 
@@ -133,9 +133,9 @@ export default function App() {
 - در Astro داخل بلوک `---` می‌نویسی (مثل frontmatter در Markdown).
 - در React همه‌چیز داخل JSX و با `return` میاد.
 
- 
 
-## 🔹 ساخت Component ساده
+
+## ساخت Component ساده
 
 #### ✅ Astro Component (`src/components/Greeting.astro`)
 
@@ -177,9 +177,9 @@ export default function App() {
 }
 ```
 
- 
 
-## 🔹 اضافه کردن React در Astro
+
+## اضافه کردن React در Astro
 
 Astro می‌تونه مستقیماً کامپوننت React رو رندر کنه! 🎉
 
@@ -216,9 +216,9 @@ import MyButton from "../components/MyButton.jsx";
 
 🔸 اینجاست که قدرت Astro مشخص میشه: بیشتر سایت رو HTML خالص می‌سازه (بدون JS اضافی)، ولی هرجا نیاز داری React میاد وسط.
 
- 
 
-# 🔹 Layouts در Astro
+
+# Layouts در Astro
 
 Layout مثل یک قالب کلیه که برای چندین صفحه استفاده می‌شه (header, footer, navigation).
 
@@ -254,7 +254,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 </BaseLayout>
 ```
 
- 
+
 
 #### 🔄 معادل React Layout
 
@@ -284,9 +284,9 @@ export default function About() {
 }
 ```
 
- 
 
-## 🔹 Routing در Astro
+
+## Routing در Astro
 
 Astro **File-based routing** داره (یعنی اسم فایل = مسیر).
 
@@ -313,7 +313,7 @@ const { slug } = Astro.params;
 
 👉 رفتن به `/blog/hello-world` → نمایش: **Blog Post: hello-world**
 
- 
+
 
 #### 🔄 معادل React (با React Router)
 
@@ -336,9 +336,9 @@ export default function App() {
 }
 ```
 
- 
 
-## 🔹 جزیره‌ها (Islands Architecture)
+
+## جزیره‌ها (Islands Architecture)
 
 ایده مهم Astro اینه که کل صفحه HTML استاتیک باشه، فقط بخش‌هایی که نیاز دارن React/Vue/Svelte باشن **Hydrate** میشن.
 
@@ -375,7 +375,7 @@ import Counter from "../components/Counter.jsx";
 - `client:idle` → وقتی مرورگر بیکار شد
 - `client:visible` → وقتی کاربر اسکرول کرد و دید
 
- 
+
 
 #### 🔄 معادل در React (کل صفحه JS میشه)
 
@@ -396,9 +396,9 @@ export default function App() {
 
 📌 تفاوت: در Astro فقط همون دکمه React میشه، بقیه صفحه HTML خالصه. در React کل صفحه Hydrate میشه.
 
- 
 
-## 🔹 Data Fetching در Astro
+
+## Data Fetching در Astro
 
 Astro می‌تونه مستقیماً داده‌ها رو در **Server-side build** بگیره.
 
@@ -419,7 +419,7 @@ const users = await res.json();
 </html>
 ```
 
- 
+
 
 #### 🔄 معادل در React (Client-side fetching)
 
@@ -453,9 +453,9 @@ export default function Users() {
 - در Astro داده‌ها موقع build یا SSR لود میشن → سریع‌تر برای SEO.
 - در React باید در مرورگر fetch بشه → SEO ضعیف‌تر.
 
- 
 
-## 🔹 API Endpoints در Astro
+
+## API Endpoints در Astro
 
 Astro می‌تونه مثل Next.js خودش API بسازه.
 
@@ -475,7 +475,7 @@ export async function GET() {
 { "message": "Hello from Astro API 🚀" }
 ```
 
- 
+
 
 #### 🔄 معادل در React (Express یا Next.js)
 
@@ -491,9 +491,9 @@ app.get("/api/hello", (req, res) => {
 app.listen(3000);
 ```
 
- 
 
-## 🔹 SSR (Server-Side Rendering) در Astro
+
+## SSR (Server-Side Rendering) در Astro
 
 به طور پیش‌فرض Astro **Static Site** می‌سازه، ولی می‌تونی **SSR** رو فعال کنی.
 
@@ -522,7 +522,7 @@ const now = new Date().toLocaleTimeString();
 
 هر بار که رفرش کنی، زمان جدید می‌بینی.
 
- 
+
 
 #### 🔄 معادل در React (Next.js SSR)
 
@@ -536,9 +536,9 @@ export default function Time({ time }) {
 }
 ```
 
- 
 
-## 🔹 مثال ۱: استفاده از Markdown در Astro
+
+## مثال ۱: استفاده از Markdown در Astro
 
 یکی از ویژگی‌های خیلی قوی Astro اینه که به راحتی می‌تونی محتوا رو از فایل‌های Markdown بیاری.
 
@@ -550,9 +550,7 @@ title: "اولین پست وبلاگ"
 date: "2025-09-16"
 ---
 
-# سلام دنیا 🌍
-
-این اولین پست من با **Astro + Markdown** هست.
+## Astro + Markdown
 ```
 
 ### ✅ `src/pages/blog/index.astro`
@@ -577,7 +575,7 @@ import Post from "./first-post.md";
 import ReactMarkdown from "react-markdown";
 
 const md = `
-# سلام دنیا 🌍  
+# سلام دنیا 🌍
 این اولین پست من با **React + Markdown** هست.
 `;
 
@@ -586,7 +584,7 @@ export default function Blog() {
 }
 ```
 
- 
+
 
 ## 🔹 مثال ۲: شرطی‌سازی در Astro
 
@@ -619,9 +617,9 @@ export default function Conditional() {
 }
 ```
 
- 
 
-## 🔹 مثال ۳: حلقه (Loop) در Astro
+
+## مثال ۳: حلقه (Loop) در Astro
 
 #### ✅ Astro (`src/pages/products.astro`)
 
@@ -665,9 +663,9 @@ export default function Products() {
 }
 ```
 
- 
 
-## 🔹 مثال ۴: ترکیب CSS و Astro
+
+## مثال ۴: ترکیب CSS و Astro
 
 Astro بهت اجازه میده هم **Scoped CSS** داشته باشی هم فایل سراسری.
 
@@ -718,9 +716,9 @@ export default function Card({ title, text }) {
 }
 ```
 
- 
 
-## 🔹 مثال ۵: استفاده از Slot در Astro (مثل children در React)
+
+## مثال ۵: استفاده از Slot در Astro (مثل children در React)
 
 #### ✅ Astro (`src/components/Layout.astro`)
 
@@ -771,9 +769,9 @@ export default function Page() {
 }
 ```
 
- 
 
-## 🔹 مثال ۶: استفاده از Partial Hydration برای بهینه‌سازی
+
+## مثال ۶: استفاده از Partial Hydration برای بهینه‌سازی
 
 #### ✅ Astro (`src/pages/counter.astro`)
 
@@ -800,9 +798,9 @@ export default function Counter() {
 }
 ```
 
- 
 
-## 🔹 مثال ۷: Import JSON مستقیم در Astro
+
+## مثال ۷: Import JSON مستقیم در Astro
 
 #### ✅ Astro
 
@@ -836,9 +834,9 @@ export default function Users() {
 }
 ```
 
- 
 
-## 🔹 پروژه ۱: وبلاگ ساده (Static Blog)
+
+## پروژه ۱: وبلاگ ساده (Static Blog)
 
 ### ساختار پروژه در Astro
 
@@ -893,7 +891,7 @@ import BlogLayout from "../../layouts/BlogLayout.astro";
 </BlogLayout>
 ```
 
- 
+
 
 #### 🔄 معادل در React (Next.js)
 
@@ -926,9 +924,9 @@ export default function Post({ content }) {
 
 📌 توی Astro خیلی راحت‌تر شد، بدون نیاز به `fs`, `matter` یا پلاگین اضافه.
 
- 
 
-## 🔹 پروژه ۲: ToDo App با جزیره‌ها (Interactive Island)
+
+## پروژه ۲: ToDo App با جزیره‌ها (Interactive Island)
 
 ### ✅ `src/components/Todo.jsx`
 
@@ -977,7 +975,7 @@ import Todo from "../components/Todo.jsx";
 </html>
 ```
 
- 
+
 
 #### 🔄 معادل در React
 
@@ -1018,9 +1016,9 @@ export default function App() {
 - در **Astro** فقط اون جزیره ToDo به React هیدرات میشه.
 - در **React** کل صفحه جاوااسکریپت میشه.
 
- 
 
-## 🔹 پروژه ۳: Portfolio با Routing و Layout
+
+## پروژه ۳: Portfolio با Routing و Layout
 
 ### ساختار
 
@@ -1076,7 +1074,7 @@ const projects = ["Astro Blog", "ToDo App", "Portfolio"];
 </Layout>
 ```
 
- 
+
 
 #### 🔄 معادل در React (React Router)
 

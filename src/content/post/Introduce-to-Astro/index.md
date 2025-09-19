@@ -40,7 +40,7 @@ const serverData = await fetch('/api/data');
     <h1>صفحه من</h1>
     <!-- این دکمه هیچ JavaScript نداره -->
     <Button />
-    
+
     <!-- فقط این دکمه JavaScript میگیره -->
     <Button client:load />
   </body>
@@ -81,10 +81,10 @@ const greeting = "سلام، Astro!";
   <body>
     <div id="foo">
       <h1>{greeting}</h1>
-      
+
       <!-- دکمه static - JavaScript نمیفرسته -->
       <Button>کلیک کن (static)</Button>
-      
+
       <!-- دکمه تعاملی - JavaScript داره -->
       <Button client:load>کلیک کن (interactive)</Button>
     </div>
@@ -122,12 +122,12 @@ const names = ['علی', 'فاطمه', 'حسن', 'زهرا'];
   <body>
     <!-- محتوای static -->
     <h1>به سایت من خوش اومدی</h1>
-    
+
     <!-- component تعاملی فقط وقتی لازم باشه -->
     <button id="name-button" client:load>
       اسم تصادفی بگیر
     </button>
-    
+
     <div id="result"></div>
   </body>
 </html>
@@ -136,7 +136,7 @@ const names = ['علی', 'فاطمه', 'حسن', 'زهرا'];
   const names = ['علی', 'فاطمه', 'حسن', 'زهرا'];
   const button = document.getElementById('name-button');
   const result = document.getElementById('result');
-  
+
   button?.addEventListener('click', () => {
     const randomName = names[Math.floor(Math.random() * names.length)];
     result.textContent = `سلام، ${randomName}!`;
@@ -154,7 +154,7 @@ const names = ['علی', 'فاطمه', 'حسن', 'زهرا'];
 یکی از جذاب‌ترین ویژگی‌های Astro اینه که framework agnostic هستش. می‌تونی استفاده کنی از:
 
 - **React** component ها
-- **Vue** component ها  
+- **Vue** component ها
 - **Svelte** component ها
 - **Solid.js** component ها
 - **Vanilla JavaScript**
@@ -251,7 +251,6 @@ npm run build
 
 vendor lock-in نداری، نیاز به server خاص نداری - فقط فایل‌های static سریع.
 
-## گفتگو با بنیان‌گذار Astro
 
 ### آیا Astro برای مبتدیان خوبه؟
 
@@ -274,7 +273,7 @@ Astro روی Vite ساخته شده که قابلیت‌های scaling عالی 
 Astro برای اینها عالیه:
 
 ✅ **سایت‌های محتوایی و blog ها**
-✅ **وبسایت‌های marketing**  
+✅ **وبسایت‌های marketing**
 ✅ **سایت‌های مستندات**
 ✅ **صفحات محصولات e-commerce**
 ✅ **سایت‌های portfolio**
@@ -286,7 +285,7 @@ Astro برای اینها عالیه:
 ❌ **Dashboard های real-time**
 ❌ **سناریوهای پیچیده state management**
 
-## امروز شروع کن
+## همین الان شروع کن
 
 آماده‌ای Astro رو امتحان کنی؟ اینجوری شروع کن:
 
@@ -311,4 +310,4 @@ Astro یه بازگشت به اصول بنیادی وب محسوب میشه در
 
 تو دورانی که web performance مستقیماً روی تجربه کاربری، رنکینگ SEO، و نرخ تبدیل تاثیر داره، رویکرد Astro یعنی "HTML اول، JavaScript وقتی لازم باشه" یه مسیر جذاب به جلو ارائه میده. چه داری یه blog شخصی می‌سازی، چه وبسایت شرکت، چه اپلیکیشن پر محتوا، Astro شایسته بررسی جدی هست.
 
-وب داره به سمت آینده‌ای با آگاهی بیشتر نسبت به performance حرکت می‌کنه، و Astro داره این حرکت رو رهبری می‌کنه. این آخر هفته امتحانش کن - کاربرانت (و قبض سرورت) ازت تشکر می‌کنن.
+وب داره به سمت آینده‌ای با آگاهی بیشتر نسبت به performance حرکت می‌کنه، و Astro داره این حرکت رو رهبری می‌کنه.

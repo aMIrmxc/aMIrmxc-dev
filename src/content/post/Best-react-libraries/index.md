@@ -1,5 +1,5 @@
 ---
-title: "مهمترین کتابخانه‌های React"
+title: "معرفی بهترین کتابخانه‌های React"
 description: "معرفی و آموزش کاربردی برترین کتابخانه‌های React برای مسیریابی، مدیریت state، دریافت داده، فرم‌ها، UI و انیمیشن؛ همراه با کد و نکات انتخاب"
 publishDate: "14 Aug 2024"
 updatedDate: "03 Jan 2025"
@@ -7,9 +7,9 @@ tags: ["React", "React Libraries", "React-Router", "Zustand", "TanStack-Query", 
 ---
 
 
-# راهنمای جامع: مهمترین کتابخانه‌هایی که باید کنار React استفاده کنید
+# معرفی بهترین کتابخانه‌هایی که می توانیم کنار React استفاده کنیم
 
-سلام به همه توسعه‌دهندگان عزیز! امروز می‌خوایم باهم راجع به یکی از مهمترین موضوعات در توسعه با React صحبت کنیم. خیلی از شما که تازه وارد دنیای React شدید، احتمالاً این سوال براتون پیش اومده که "خب React رو یاد گرفتم، ولی برای ساختن یه پروژه کامل چه کتابخانه‌های دیگه‌ای هم لازم دارم؟"
+سلام به همه توسعه‌دهندگان عزیز! امروز می‌خوایم باهم راجع به یکی از مهمترین موضوعات در توسعه با React صحبت کنیم. خیلی از شما که وارد دنیای React شدید، احتمالاً این سوال براتون پیش اومده که "خب React رو یاد گرفتم، ولی برای ساختن یه پروژه کامل چه کتابخانه‌های دیگه‌ای هم لازم دارم؟"
 
 راستش رو بخوایم، React خودش یه کتابخانه عالی برای ساخت رابط کاربری هست، ولی برای یه پروژه کامل و حرفه‌ای، نیاز به کتابخانه‌های کمکی دیگه‌ای داریم. امروز می‌خوایم یه راهنمای جامع برای شما تهیه کنیم تا بدونید کدوم کتابخانه‌ها رو کی و چرا استفاده کنید.
 
@@ -195,7 +195,7 @@ function ContactForm() {
         placeholder="نام شما"
       />
       {errors.name && <span>{errors.name.message}</span>}
-      
+
       <input
         {...register('email', {
           required: 'ایمیل الزامی است',
@@ -207,7 +207,7 @@ function ContactForm() {
         placeholder="ایمیل"
       />
       {errors.email && <span>{errors.email.message}</span>}
-      
+
       <button type="submit">ارسال</button>
     </form>
   )
@@ -367,9 +367,9 @@ import { faIR } from 'date-fns/locale'
 const formattedDate = format(new Date(), 'PPP', { locale: faIR })
 
 // محاسبه فاصله زمانی
-const timeAgo = formatDistanceToNow(new Date(2023, 0, 1), { 
-  addSuffix: true, 
-  locale: faIR 
+const timeAgo = formatDistanceToNow(new Date(2023, 0, 1), {
+  addSuffix: true,
+  locale: faIR
 })
 ```
 
