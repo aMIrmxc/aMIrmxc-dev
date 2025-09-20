@@ -7,6 +7,13 @@ export async function getAllPosts(): Promise<CollectionEntry<"post">[]> {
 	});
 }
 
+/** Get all pinned posts */
+export async function getPinnedPosts(): Promise<CollectionEntry<"post">[]> {
+	return await getCollection("post", ({ data }) => {
+		return (import.meta.env.PROD ? !data.draft : true) && data.pinned === true;
+	});
+}
+
 /** Get tag metadata by tag name */
 export async function getTagMeta(tag: string): Promise<CollectionEntry<"tag"> | undefined> {
 	const tagEntries = await getCollection("tag", (entry) => {
@@ -24,7 +31,7 @@ export function groupPostsByYear(posts: CollectionEntry<"post">[]) {
 		if (!acc[year]) {
 			acc[year] = [];
 		}
-		acc[year]?.push(post);
+	acc[year]?.push(post);
 		return acc;
 	}, {});
 }

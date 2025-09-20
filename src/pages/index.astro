@@ -3,14 +3,18 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import SocialList from "@/components/SocialList.astro";
 import PostPreview from "@/components/blog/PostPreview.astro";
 import Note from "@/components/note/Note.astro";
-import { getAllPosts } from "@/data/post";
+import { getAllPosts, getPinnedPosts } from "@/data/post";
 import PageLayout from "@/layouts/Base.astro";
 import { collectionDateSort } from "@/utils/date";
 
-// Posts
+// Pinned posts
+const pinnedPosts = await getPinnedPosts();
+
+// Regular posts (excluding pinned ones)
 const MAX_POSTS = 30;
 const allPosts = await getAllPosts();
-const allPostsByDate = allPosts
+const nonPinnedPosts = allPosts.filter(post => !post.data.pinned);
+const allPostsByDate = nonPinnedPosts
 	.sort(collectionDateSort)
 	.slice(0, MAX_POSTS) as CollectionEntry<"post">[];
 
@@ -30,6 +34,25 @@ const latestNotes = allNotes.sort(collectionDateSort).slice(0, MAX_NOTES);
 		</p>
 		<SocialList />
 	</section>
+	
+	<!-- Pinned Posts Section -->
+	{
+		pinnedPosts.length > 0 && (
+			<section class="mt-16">
+				<h2 class="title text-accent mb-6 text-xl">Pinned Posts</h2>
+				<ul class="space-y-6" role="list">
+					{
+						pinnedPosts.map((p) => (
+							<li class="grid gap-2 sm:grid-cols-[auto_1fr]">
+								<PostPreview post={p} />
+							</li>
+						))
+					}
+				</ul>
+			</section>
+		)
+	}
+	
 	<section class="mt-16">
 		<h2 class="title text-accent mb-6 text-xl"><a href="/posts/">Posts</a></h2>
 		<ul class="space-y-6" role="list">
