@@ -2,7 +2,7 @@
 title: "یادگیری Astro برای React Developer ها"
 description: "راهنمای جامع مهاجرت از React به Astro با مثال‌های کاربردی و مقایسه کد‌به‌کد"
 publishDate: "17 Aug 2025"
-tags: ["astro", "react", "migration", "performance", "islands-architecture"]
+tags: ["astro", "react", "migration", "performance", "islands-architecture"] 
 ---
 
 
