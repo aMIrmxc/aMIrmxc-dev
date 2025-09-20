@@ -3,6 +3,7 @@ title: "یادگیری Astro برای React Developer ها"
 description: "راهنمای جامع مهاجرت از React به Astro با مثال‌های کاربردی و مقایسه کد‌به‌کد"
 publishDate: "17 Aug 2025"
 tags: ["astro", "react", "migration", "performance", "islands-architecture"]
+pinned: true
 ---
 
 
@@ -55,7 +56,7 @@ Astro یک **Static Site Builder** و در عین حال یک **SSR Framework** 
 
 با Astro می‌تونید قدرت **Static HTML + Dynamic Islands** رو در یک پروژه تجربه کنید.
 
-##🔹 شروع پروژه Astro
+## شروع پروژه Astro
 
 ### نصب پروژه جدید:
 
@@ -85,7 +86,7 @@ src/
 
 
 
-# 🔹 اولین صفحه در Astro
+## اولین صفحه در Astro
 
 فایل: `src/pages/index.astro`
 
@@ -128,7 +129,7 @@ export default function App() {
 }
 ```
 
-🔸 تفاوت:
+ تفاوت:
 
 - در Astro داخل بلوک `---` می‌نویسی (مثل frontmatter در Markdown).
 - در React همه‌چیز داخل JSX و با `return` میاد.
@@ -181,7 +182,7 @@ export default function App() {
 
 ## اضافه کردن React در Astro
 
-Astro می‌تونه مستقیماً کامپوننت React رو رندر کنه! 🎉
+Astro می‌تونه مستقیماً کامپوننت React رو رندر کنه! 
 
 ### نصب React در Astro:
 
@@ -214,7 +215,7 @@ import MyButton from "../components/MyButton.jsx";
 </html>
 ```
 
-🔸 اینجاست که قدرت Astro مشخص میشه: بیشتر سایت رو HTML خالص می‌سازه (بدون JS اضافی)، ولی هرجا نیاز داری React میاد وسط.
+ اینجاست که قدرت Astro مشخص میشه: بیشتر سایت رو HTML خالص می‌سازه (بدون JS اضافی)، ولی هرجا نیاز داری React میاد وسط.
 
 
 
@@ -586,7 +587,7 @@ export default function Blog() {
 
 
 
-## 🔹 مثال ۲: شرطی‌سازی در Astro
+## مثال ۲: شرطی‌سازی در Astro
 
 #### ✅ Astro (`src/pages/conditional.astro`)
 
