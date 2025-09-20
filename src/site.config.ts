@@ -16,11 +16,11 @@ export const siteConfig: SiteConfig = {
 	// Used as the default description meta property and webmanifest description
 	description: "The blog of aMIrmxc, built with Astro",
 	// HTML lang property, found in src/layouts/Base.astro L:18 & astro.config.ts L:48
-	lang: "en-GB",
+	lang: "fa-IR",
 	// Meta property, found in src/components/BaseHead.astro L:42
-	ogLocale: "en_GB",
-	/* 
-		- Used to construct the meta title property found in src/components/BaseHead.astro L:11 
+	ogLocale: "fa_IR",
+	/*
+		- Used to construct the meta title property found in src/components/BaseHead.astro L:11
 		- The webmanifest name found in astro.config.ts L:42
 		- The link value found in src/components/layout/Header.astro L:35
 		- In the footer found in src/components/layout/Footer.astro L:12
@@ -79,3 +79,4 @@ export const expressiveCodeOptions: AstroExpressiveCodeOptions = {
 	themes: ["dracula", "github-light"],
 	useThemedScrollbars: false,
 };
+

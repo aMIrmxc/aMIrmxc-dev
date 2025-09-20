@@ -4,7 +4,6 @@ description: "نحوه راه‌اندازی محیط AI coding کاملاً ر�
 publishDate: "17 Sep 2025"
 tags: ["AI coding", "Qwen", "Kilo Code", "Free", "VS Code"]
 pinned: true
-
 ---
 
 
