@@ -3,7 +3,7 @@ title: "Next.js 15 برسی "
 description: "هر آنچه برای ارتقاء به Next.js 15 نیاز دارید؛ از Codemod خودکار تا breaking changeهای caching و async APIها"
 publishDate: "14 Aug 2024"
 updatedDate: "03 Mar 2025"
-tags: ["Next.js", "Migration", "React-19", "Turbopack", "Caching", "Async-APIs"]
+tags: ["Nextjs", "Migration", "React19"]
 ---
 
 
@@ -354,7 +354,7 @@ function ProblematicComponent() {
 
 پروژه های جدید خودکار `.env*` فایل ها رو به `.gitignore` اضافه میکنن:
 
-```gitignore
+```
 # Environment variables
 .env
 .env.local

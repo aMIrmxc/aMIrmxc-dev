@@ -3,26 +3,26 @@ title: "راهنمای کامل React به زبان ساده"
 description: "این پست تمام مفاهیم اساسی React را از componentها و JSX گرفته تا Context، Portals و Error Boundaries با مثال‌های عملی و توضیحات ساده پوشش می‌دهد"
 publishDate: "15 Apr 2024"
 updatedDate: "03 Jan 2025"
-tags: ["React", "JavaScript", "Frontend", "Tutorial"]
+tags: ["React", "JavaScript", "Frontend"]
 ---
 
-# همه مفاهیم React js به زبان ساده
+# همه مفاهیم React js به زبان سادهh
 
 React یه کتابخانه قدرتمند JavaScript هست که طریقه ساخت رابط کاربری رو کاملاً عوض کرده. اگرچه اصطلاحات خاص خودش مثل reconciliation، composition و error boundaries داره، اما فهمیدن این مفاهیم کلید تسلط روی React هست. این راهنمای جامع قراره همه مفاهیم اساسی React رو با مثال‌های عملی و توضیحات ساده برات شرح بده.
 
 ## فهرست مطالب
 
-- [راهنمای کامل React: همه مفاهیم به زبان ساده](#راهنمای-کامل-react-همه-مفاهیم-به-زبان-ساده)
+- [همه مفاهیم React js به زبان ساده](#همه-مفاهیم-react-js-به-زبان-ساده)
   - [فهرست مطالب](#فهرست-مطالب)
   - [Component ها: قطعات سازنده](#component-ها-قطعات-سازنده)
   - [JSX: JavaScript با لباس HTML](#jsx-javascript-با-لباس-html)
-    - [قوانین کلیدی JSX](#قوانین-کلیدی-jsx)
+    - [قوانین کلیدی JSX:](#قوانین-کلیدی-jsx)
     - [React Fragments](#react-fragments)
   - [Props: انتقال داده بین Component ها](#props-انتقال-داده-بین-component-ها)
     - [Props مخصوص Children](#props-مخصوص-children)
     - [Props مخصوص Key](#props-مخصوص-key)
   - [فرآیند Rendering](#فرآیند-rendering)
-    - [فرآیند  Virtual DOM](#فرآیند-virtual-dom)
+    - [فرآیند Virtual DOM:](#فرآیند-virtual-dom)
   - [Event Handling](#event-handling)
   - [State Management](#state-management)
     - [Hook مخصوص useState](#hook-مخصوص-usestate)
@@ -33,7 +33,7 @@ React یه کتابخانه قدرتمند JavaScript هست که طریقه س�
     - [۳. Ref Hooks](#۳-ref-hooks)
     - [۴. Effect Hooks](#۴-effect-hooks)
     - [۵. Performance Hooks](#۵-performance-hooks)
-  - [ Component ها](#خلوص-component-ها)
+  - [خلوص Component ها](#خلوص-component-ها)
     - [Strict Mode](#strict-mode)
   - [Effects و Side Effects](#effects-و-side-effects)
   - [Refs: دسترسی مستقیم به DOM](#refs-دسترسی-مستقیم-به-dom)

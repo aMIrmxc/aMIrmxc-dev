@@ -34,9 +34,18 @@ export default defineConfig({
 	integrations: [
 		expressiveCode(expressiveCodeOptions),
 		icon(),
-		sitemap(),
+		sitemap({
+			filter: (page) => !page.startsWith("/tags/"),
+		}),
 		mdx(),
-		robotsTxt(),
+		robotsTxt({
+			policy: [
+				{
+					userAgent: "*",
+					disallow: "/tags/",
+				},
+			],
+		}),
 		webmanifest({
 			// See: https://github.com/alextim/astro-lib/blob/main/packages/astro-webmanifest/README.md
 			name: siteConfig.title,

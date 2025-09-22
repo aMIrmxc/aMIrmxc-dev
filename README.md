@@ -2,11 +2,18 @@
 
 
 <div align="center">
-  <img src="public/icon2.png" alt="aMIrmxc Blog"  width="600" height="600 "/>
+  <img src="public/icon2.png" alt="aMIrmxc Blog"  width="300" height="300 "/>
+<h1>This is amirmxc's personal blog built with Astro.js.</h1>
 </div>
 
 
-This is a personal blog built with Astro.js.
+
+## Core Technology Stack
+Framework: Astro v5.10.1 - A modern static site builder that uses the "Islands Architecture" for optimal performance
+Language: TypeScript for type safety throughout the project
+Styling: Tailwind CSS for utility-first styling approach
+Content Format: Markdown and MDX for blog posts and notes
+
 
 ## Development
 
@@ -25,16 +32,6 @@ npm run dev
 npm run build
 ```
 
-## Deployment
-
-The site is automatically deployed to GitHub Pages using GitHub Actions. The deployment workflow is defined in `.github/workflows/deploy.yml`.
-
-For manual deployment, you can use:
-
-```bash
-# Deploy to GitHub Pages
-npm run deploy
-```
 
 ## Project Structure
 

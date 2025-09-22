@@ -3,7 +3,7 @@ title: "مرور شب امتحانی دستورات Git"
 description: "راهنمای جامع و فشرده برای مرور سریع دستورات Git از مقدماتی تا پیشرفته"
 publishDate: "14 Mar 2023"
 updatedDate: "27 Apr 2025"
-tags: ["git", "cheatsheet", "guide"]
+tags: ["git", "cheatsheet"]
 ---
 
 

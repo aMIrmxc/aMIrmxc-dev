@@ -3,7 +3,7 @@ title: "آموزش Storybook "
 description: "برسی جامع برای راه‌اندازی، ساخت story و بهترین‌‌های کار با Storybook در پروژه‌های React"
 publishDate: "17 Sep 2023"
 updatedDate: "03 May 2025"
-tags: ["react", "storybook", "component", "testing"]
+tags: ["react", "storybook", "testing"]
 ---
 
 # آموزش کامل Storybook: ساخت component های بهتر با documentation و testing

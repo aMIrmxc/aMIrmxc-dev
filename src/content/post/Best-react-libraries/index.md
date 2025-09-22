@@ -3,7 +3,7 @@ title: "معرفی بهترین کتابخانه‌های React"
 description: "معرفی و آموزش کاربردی برترین کتابخانه‌های React برای مسیریابی، مدیریت state، دریافت داده، فرم‌ها، UI و انیمیشن؛ همراه با کد و نکات انتخاب"
 publishDate: "14 Aug 2024"
 updatedDate: "03 Jan 2025"
-tags: ["React", "React Libraries", "React-Router", "Zustand", "TanStack-Query", "React-Hook-Form", "TypeScript"]
+tags: ["React", "ReactLibraries", "ReactRouter", "Zustand", "TanStackQuery", "ReactHookForm", "TypeScript"]
 ---
 
 
