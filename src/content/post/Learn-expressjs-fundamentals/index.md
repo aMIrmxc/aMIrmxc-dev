@@ -1,9 +1,9 @@
 ---
 title: "آموزش پایه ای  Express.js "
 description: "راهنمای کامل Express.js شامل routing، middleware، view engine ها و تکنیک‌های پیشرفته برای ساخت backend های قدرتمند"
-publishDate: "17 Sep 2023"
+publishDate: "17 Sep 2024"
 updatedDate: "03 Apr 2025"
-tags: ["express", "nodejs", "backend", "javascript", "middleware", "routing"]
+tags: ["expressjs", "nodejs", "backend", "javascript"]
 ---
 
 
