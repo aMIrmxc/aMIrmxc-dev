@@ -9,7 +9,9 @@ type Props = SiteMeta;
 const { articleDate, description, ogImage, title } = Astro.props;
 
 const titleSeparator = "•";
-const siteTitle = `${title} ${titleSeparator} ${siteConfig.title}`;
+const pagesWithSiteTitle = ["/", "/posts/", "/notes/", "/about/"];
+const shouldAddSiteTitle = pagesWithSiteTitle.includes(Astro.url.pathname);
+const siteTitle = shouldAddSiteTitle ? `${title} ${titleSeparator} ${siteConfig.title}` : title;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const socialImageURL = new URL(ogImage ? ogImage : "/social-card.png", Astro.url).href;
 const isTagsPage = Astro.url.pathname.startsWith('/tags');

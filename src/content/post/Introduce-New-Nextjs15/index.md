@@ -354,7 +354,7 @@ function ProblematicComponent() {
 
 پروژه های جدید خودکار `.env*` فایل ها رو به `.gitignore` اضافه میکنن:
 
-```gitignore
+```
 # Environment variables
 .env
 .env.local
