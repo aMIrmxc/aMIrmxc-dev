@@ -8,7 +8,7 @@ type Props = SiteMeta;
 
 const { articleDate, description, ogImage, title } = Astro.props;
 
-const titleSeparator = "•";
+// const titleSeparator = "•";
 
 // const pagesWithSiteTitle = ["/", "/posts/", "/notes/", "/about/"];
 // const shouldAddSiteTitle = pagesWithSiteTitle.includes(Astro.url.pathname);
@@ -38,7 +38,7 @@ const jsonLd = {
 <meta charset="utf-8" />
 <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 {isNoIndexsPage && <meta name="robots" content="noindex" />}
-<title>{`${title} ${titleSeparator} ${siteConfig.title}`}</title>
+<title>{`${title}`}</title>
 
 {/* Google Site Name Schema */}
 <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
